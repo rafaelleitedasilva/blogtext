@@ -9,4 +9,4 @@
 </p>
 
 <p> O objetivo dessa aplicação é criar um sistema simples e agradável para publicação de textos autorais. </p>
-<p> Com deplopy na Vercel, Autenticação Básica, Publicação e Edição de Conteúdo. </p>
+<p> Com deploy na Vercel, Autenticação Básica, Publicação e Edição de Conteúdo. </p>
