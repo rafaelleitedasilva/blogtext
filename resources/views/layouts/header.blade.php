@@ -1,5 +1,5 @@
 @if(Session::has('message'))
-    <div class="w-50 alert alert-success m-3" style="max-width: 600px;position: fixed; left: 50%;
+    <div class="w-100 alert alert-success mt-3 mr-3 ml-3" style="max-width: 500px;position: fixed; left: 50%;
     transform: translate(-50%, 0);" role="alert">
         <h4 class="alert-heading">{{Session::get('title')}}</h4>
         <p>{{Session::get('message')}}</p>
