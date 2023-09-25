@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ArtisanController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
 
@@ -18,9 +19,10 @@ Route::get('/', function () {
      return view('welcome');
 })->name('welcome');
 
-Route::post('/email-confirmacao', [WelcomeController::class, 'email'])->name(
+Route::post('email-confirmacao', [WelcomeController::class, 'email'])->name(
      'email-confirmacao'
 );
-Route::get('/confirmaEmail', [WelcomeController::class, 'confirmaEmail'])->name(
+
+Route::get('confirmaEmail', [WelcomeController::class, 'confirmaEmail'])->name(
      'confirmaEmail'
 );
