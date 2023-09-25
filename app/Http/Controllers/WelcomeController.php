@@ -15,12 +15,14 @@ class WelcomeController extends Controller
             'email' => 'required|max:255',
         ]);
         
-        $email = $request->only('email');
+        $email = $request->email;
+
         if(ModelEmailConfirmacao::where('email', $email)->first()){
-            Session::flash('message', 'Email já cadastrado!');
+            Session::flash('title', 'Email já cadastrado!');
+            Session::flash('message', 'Se quiser pode se cadastrar com um email diferente...');
         }else{
             Mail::to($email)->send(new EmailConfirmacao($email));
-
+            Session::flash('title', 'Email Enviado!');
             Session::flash('message', 'Email de confirmação enviado, assim que aprova-lo na sua caixa de entrada, seu email entrará na nossa base de dados para notificação!');
         }
 
@@ -32,6 +34,7 @@ class WelcomeController extends Controller
         $email->email = $request->email;
         $email->save();
         
+        Session::flash('title', 'Email Confirmado!');
         Session::flash('message', 'Email confirmado com sucesso! Assim que finalizarmos te avisaremos!');
         return redirect()->route('welcome');
     }
