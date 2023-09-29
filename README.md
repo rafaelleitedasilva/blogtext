@@ -11,3 +11,5 @@
 
 <p> O objetivo dessa aplicação é criar um sistema simples e agradável para publicação de textos autorais. </p>
 <p> Com deploy na Vercel, Autenticação Básica, Publicação e Edição de Conteúdo. </p>
+
+![Alt](https://repobeats.axiom.co/api/embed/1dba7d049586d99c506c2abfe68b457b9a2b794a.svg "Repobeats analytics image")
