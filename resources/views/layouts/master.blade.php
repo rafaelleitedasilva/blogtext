@@ -9,10 +9,20 @@
         
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{asset('fonts/icomoon/style.css')}}">
+	    <link rel="stylesheet" href="{{asset('fonts/flaticon/font/flaticon.css')}}">
+
+        <!-- CDN -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
         @vite([
             'resources/css/app.css',
-            'resources/js/app.js'])
+            'resources/js/app.js',
+            'resources/scss/style.scss'])
     </head>
     <body>
         @include('layouts.header')
