@@ -7,7 +7,7 @@ Você está recebendo este email porque registrou seu email em nosso site. Por f
 
 Se você não solicitou esta confirmação, você pode ignorar este email:
 
-<x-mail::button :url="route('confirmaEmail', ['email' => $email])">
+<x-mail::button :url="route('email.view', ['email' => $email])">
 Confirmar Email
 </x-mail::button>
 

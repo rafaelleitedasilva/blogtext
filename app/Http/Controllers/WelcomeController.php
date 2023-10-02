@@ -10,8 +10,8 @@ use App\Models\EmailConfirmacao as ModelEmailConfirmacao;
 
 class WelcomeController extends Controller
 {
-    public function email(Request $request){
-        $validated = $request->validate([
+    public function send(Request $request){
+        $request->validate([
             'email' => 'required|max:255',
         ]);
         
@@ -26,16 +26,15 @@ class WelcomeController extends Controller
             Session::flash('message', 'Email de confirmação enviado, assim que aprova-lo na sua caixa de entrada, seu email entrará na nossa base de dados para notificação!');
         }
 
-        return redirect()->back();
+        return redirect()->back(301);
     }
 
-    public function confirmaEmail(Request $request){
-        $email = new ModelEmailConfirmacao;
-        $email->email = $request->email;
-        $email->save();
+    public function view(Request $request){
+        ModelEmailConfirmacao::updateOrCreate(["email"=>$request->email]);
         
         Session::flash('title', 'Email Confirmado!');
         Session::flash('message', 'Email confirmado com sucesso! Assim que finalizarmos te avisaremos!');
+
         return redirect()->route('welcome');
     }
 }
