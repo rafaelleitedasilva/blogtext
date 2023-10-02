@@ -10,7 +10,7 @@
         <div style="width: 100%;">
             <p class="text-center" style="max-width: 300px;">O site está sendo escrito...<br> Caso queira ser notificado quando o sistema estiver pronto, coloque seu e-mail abaixo:</p>
             
-            <form action="{{route('email-confirmacao')}}" method="POST" class="w-100 d-flex">
+            <form action="{{route('email.send')}}" method="POST" class="w-100 d-flex">
                 @csrf
                 <input name="email" type="email" class="form-control" style="max-width: 300px;" placeholder="Email" max="255" required>
                 <button class="btn" type="submit">

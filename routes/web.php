@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\ArtisanController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\{WelcomeController, HomeController};
+use App\Http\Controllers\{WelcomeController,HomeController};
 
 /*
 |--------------------------------------------------------------------------
@@ -15,12 +15,7 @@ use App\Http\Controllers\{WelcomeController, HomeController};
 |
 */
 
-Route::get('/', function () {
-     return view('welcome');
-})->name('welcome');
-
+Route::get('/', function () {return view('welcome');})->name('welcome');
 Route::get('home', [HomeController::class, 'view'])->name('home.view');
-
-Route::post('email', [WelcomeController::class, 'send'])->name('email.send');
-
 Route::get('email', [WelcomeController::class, 'view'])->name('email.view');
+Route::post('email', [WelcomeController::class, 'send'])->name('email.send');
