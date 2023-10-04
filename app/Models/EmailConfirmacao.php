@@ -10,7 +10,8 @@ class EmailConfirmacao extends Model
     use HasFactory;
 
     public $table = 'email_confirmacao';
+
     public $fillable = [
-        'email'
+        'email',
     ];
 }
