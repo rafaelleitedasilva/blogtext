@@ -3,8 +3,6 @@
 namespace Tests\Unit;
 
 use Tests\TestCase;
-use Illuminate\Foundation\Testing\WithFaker;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class EmailTest extends TestCase
 {
@@ -20,7 +18,7 @@ class EmailTest extends TestCase
     public function test_email_should_return_301_with_email_request(): void
     {
         $data = [
-            "email" => "test@example.com",
+            'email' => 'test@example.com',
         ];
         $response = $this->post(route('email.send'), $data);
         $response->assertStatus(301);

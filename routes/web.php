@@ -1,15 +1,12 @@
 <?php
 
-use App\Http\Controllers\ArtisanController;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\SearchController;
+use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\{
-    WelcomeController,
-    HomeController,
-    ContactController,
-    BlogController,
-    PostController,
-    SearchController
-};
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +19,9 @@ use App\Http\Controllers\{
 |
 */
 
-Route::get('/', function () {return view('welcome');})->name('welcome');
+Route::get('/', function () {
+    return view('welcome');
+})->name('welcome');
 
 Route::get('home', [HomeController::class, 'view'])->name('home.view');
 Route::get('contact', [ContactController::class, 'view'])->name('contact.view');
