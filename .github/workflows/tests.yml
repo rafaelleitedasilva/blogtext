@@ -41,7 +41,7 @@ jobs:
                  run: npm install
 
                - name: Upping Vite Manifest
-                 run: npm run dev
+                 run: npm run build
 
                - name: Copy environment file
                  run: cp .env.example .env
