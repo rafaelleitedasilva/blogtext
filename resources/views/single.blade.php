@@ -273,7 +273,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12 text-uppercase text-center text-black">
-            BlogText
+            <img src="{{Vite::asset('resources/images/blogtext-logo.png')}}" width="45">logText
         </div>
       </div>
     </div>
