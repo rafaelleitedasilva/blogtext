@@ -6,7 +6,7 @@
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <title>BlogText @yield('title') </title>
         <link rel="shortcut icon" href="{{ Vite::asset('resources/images/blogtext-logo.png') }}" type="image/x-icon">
-        
+
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +27,7 @@
     <body>
         @include('layouts.header')
         @yield('content')
-        @include('layouts.footer')
+        {{-- @include('layouts.footer') --}}
     </body>
     @yield('scripts')
 </html>
