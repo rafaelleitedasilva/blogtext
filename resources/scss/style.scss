@@ -12,3 +12,63 @@ $secondary: #6DA1A0;
 @import 'components/site-base';
 @import 'components/site-blocks';
 @import 'components/site-footer';
+
+/*sass --watch resources/scss/style.scss:resources/css/app.css*/
+
+body{
+    .site-nav{
+        background-color: #fff;
+        .site-navigation {
+            .site-menu{
+                li {
+                    a {
+                        font-size: 14px;
+                        color: #000;
+                        :hover{
+                            color: #000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    background: #000;
+    .content-postagens{
+        margin-bottom: 50px;
+        display: flex;
+        .blog-entry{
+            font-size: clamp(2.021vw, 2.021vw + ((1vw - 0.2vw) * 3.239), 3.6vw);
+            letter-spacing: -0.02vw;
+            line-height: 1;
+            color: #fff;
+        }
+        .foto-usuario{
+            img{
+                -webkit-border-radius: 100px;
+                -moz-border-radius: 100px;
+                border-radius: 100px;
+                width: 50px;
+                margin: 25px;
+            }
+        }
+        @media screen and (max-width:768px){
+            margin-bottom: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    .post-content-body{
+        p{
+            font-size: clamp(1.25vw, 1.25vw + ((1vw - 0.2vw) * 1.538), 2vw);
+            letter-spacing: -0.01vw;
+            line-height: 1.4;
+        }
+    }
+    .sidebar-box{
+        background-color: #000;
+    }
+    .burger.light:before, .burger.light span, .burger.light:after {
+        background: #000;
+    }
+}
