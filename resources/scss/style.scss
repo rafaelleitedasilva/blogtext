@@ -3,6 +3,8 @@ $font-family-sans-serif-secondary: 'Work Sans', sans-serif;
 
 $primary: #94ccd6;
 $secondary: #6DA1A0;
+$black: #000;
+$white: #fff;
 
 @import 'bootstrap/mixins';
 @import 'bootstrap/functions';
@@ -17,22 +19,21 @@ $secondary: #6DA1A0;
 
 body{
     .site-nav{
-        background-color: #fff;
+        background-color: $white;
         .site-navigation {
             .site-menu{
                 li {
                     a {
                         font-size: 14px;
-                        color: #000;
+                        color: $black;
                         :hover{
-                            color: #000;
+                            color: $black;
                         }
                     }
                 }
             }
         }
     }
-    background: #000;
     .content-postagens{
         margin-bottom: 50px;
         display: flex;
@@ -40,7 +41,7 @@ body{
             font-size: clamp(2.021vw, 2.021vw + ((1vw - 0.2vw) * 3.239), 3.6vw);
             letter-spacing: -0.02vw;
             line-height: 1;
-            color: #fff;
+            color: $white;
         }
         .foto-usuario{
             img{
@@ -63,12 +64,18 @@ body{
             font-size: clamp(1.25vw, 1.25vw + ((1vw - 0.2vw) * 1.538), 2vw);
             letter-spacing: -0.01vw;
             line-height: 1.4;
+            @media screen and (max-width: 768px){
+                font-size: 18px;
+            }
         }
     }
     .sidebar-box{
-        background-color: #000;
+        background-color: $black;
     }
     .burger.light:before, .burger.light span, .burger.light:after {
-        background: #000;
+        background: $black;
     }
+}
+.bgblack{
+    background-color: $black;
 }

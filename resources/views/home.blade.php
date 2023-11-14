@@ -8,7 +8,7 @@
 
 
 <!-- Start posts-entry -->
-<section class="section posts-entry">
+<section class="section posts-entry bgblack">
     <div class="container">
         <div class="row mb-4">
             <div class="col-sm-12">
