@@ -23,7 +23,7 @@
     </div>
   </div>
 
-  <section class="section">
+  <section class="section bgblack">
     <div class="container">
 
       <div class="row blog-entries element-animate">
