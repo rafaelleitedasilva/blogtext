@@ -132,30 +132,29 @@
             </ul>
             <!-- END comment-list -->
 
-            <div class="comment-form-wrap pt-5">
-              <h3 class="mb-5">Leave a comment</h3>
-              <form action="#" class="p-5 bg-light">
+            <div class="comment-form-wrap pt-5 ">
+              <h3 class="mb-5">Deixe um comentário:</h3>
+              <form action="#">
                 <div class="form-group">
-                  <label for="name">Name *</label>
-                  <input type="text" class="form-control" id="name">
+                  <label for="name">Nome *</label>
+                  <input type="text" class="form-control border-dark" id="name">
                 </div>
                 <div class="form-group">
                   <label for="email">Email *</label>
-                  <input type="email" class="form-control" id="email">
+                  <input type="email" class="form-control border-dark" id="email">
                 </div>
                 <div class="form-group">
                   <label for="website">Website</label>
-                  <input type="url" class="form-control" id="website">
+                  <input type="url" class="form-control border-dark" id="website">
                 </div>
 
                 <div class="form-group">
-                  <label for="message">Message</label>
-                  <textarea name="" id="message" cols="30" rows="10" class="form-control"></textarea>
+                  <label for="message">Mensagem</label>
+                  <textarea name="" id="message" cols="30" rows="10" class="form-control border-dark"></textarea>
                 </div>
                 <div class="form-group">
-                  <input type="submit" value="Post Comment" class="btn btn-primary">
+                  <input type="submit" value="Enviar" class="btn btn-dark">
                 </div>
-
               </form>
             </div>
           </div>
@@ -266,17 +265,4 @@
       </div>
     </div>
   </section>
-
-
-  <!-- Start posts-entry -->
-  <section class="section posts-entry posts-entry-sm bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-uppercase text-center text-black">
-            <img src="{{Vite::asset('resources/images/blogtext-logo.png')}}" width="45">logText
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End posts-entry -->
 @endsection
