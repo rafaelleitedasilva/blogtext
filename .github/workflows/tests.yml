@@ -46,7 +46,10 @@ jobs:
                        mkdir -p database
                        touch database/test.sqlite
 
-               - name: Run NPM dev dependencies
+               - name: Install NPM dependencies
+                 run: npm install
+                 
+                 - name: Run NPM dev dependencies
                  run: npm run vite
 
                - name: Copy environment file
