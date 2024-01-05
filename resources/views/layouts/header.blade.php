@@ -20,7 +20,7 @@
 @endif
 
 @if(Route::currentRouteName() != 'welcome')
-<div class="site-mobile-menu site-navbar-target">
+<div class="site-mobile-menu site-navbar-target bg-dark">
     <div class="site-mobile-menu-header">
         <div class="site-mobile-menu-close">
             <span class="icofont-close js-menu-toggle"></span>
@@ -30,23 +30,19 @@
 </div>
 
 
-<nav class="site-nav">
+<nav class="site-nav bg-dark">
     <div class="container">
         <div class="menu-bg-wrap">
             <div class="site-navigation">
                 <div class="row g-0 align-items-center">
                     <div class="col-2">
-                        <a href="index.html" class="logo m-0 float-start"><img width="35" src="{{Vite::asset('resources/images/blogtext-logo.png')}}" alt=""></a>
+                        <a href="{{route('home.view')}}" class="logo m-0 float-start">BlogText</a>
                     </div>
                     <div class="col-8 text-center">
-                        <form action="#" class="search-form d-inline-block d-lg-none">
-                            <input type="text" class="form-control" placeholder="Search...">
-                            <span class="bi-search"></span>
-                        </form>
 
                         <ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu mx-auto">
-                            <li class="active"><a href="index.html">Home</a></li>
-                            <li class="has-children">
+                            <li class="text-white @if(Route::getCurrentRoute()->getName() == 'home.view') active @endif"><a href="{{route('home.view')}}">Home</a></li>
+                            {{-- <li class="has-children">
                                 <a href="category.html">Pages</a>
                                 <ul class="dropdown">
                                     <li><a href="search-result.html">Search Result</a></li>
@@ -66,18 +62,18 @@
                                         </ul>
                                     </li>
                                 </ul>
-                            </li>
-                            <li><a href="category.html">Culture</a></li>
-                            <li><a href="category.html">Business</a></li>
-                            <li><a href="category.html">Politics</a></li>
+                            </li> --}}
+                            {{-- <li @if(Route::getCurrentRoute()->getName() == 'home.view')class="active"@endif><a href="#">Culture</a></li>
+                            <li @if(Route::getCurrentRoute()->getName() == 'home.view')class="active"@endif><a href="#">Business</a></li> --}}
+                            <li class="text-white @if(Route::getCurrentRoute()->getName() == 'perfil.view') active @endif"><a href="#" class="text-15">Perfil</a></li>
                         </ul>
                     </div>
-                    <div class="col-2 text-end">
-                        <a href="#" class="burger ms-auto float-end site-menu-toggle js-menu-toggle d-inline-block d-lg-none light">
+                    <div class="col-2 text-end bg-dark">
+                        <a href="#" class="burger ms-auto float-end site-menu-toggle js-menu-toggle d-inline-block d-lg-none">
                             <span></span>
                         </a>
                         <form action="#" class="search-form d-none d-lg-inline-block">
-                            <input type="text" class="form-control" placeholder="Search...">
+                            <input type="text" class="form-control" placeholder="Pesquisar...">
                             <span class="bi-search"></span>
                         </form>
                     </div>
