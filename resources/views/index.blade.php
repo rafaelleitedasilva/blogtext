@@ -93,7 +93,7 @@
 	</nav>
 
 	<!-- Start retroy layout blog posts -->
-	<section class="section bg-light">
+	<section class="section bg-dark">
 		<div class="container">
 			<div class="row align-items-stretch retro-layout">
 				<div class="col-md-4">
@@ -218,7 +218,7 @@
 	<!-- End posts-entry -->
 
 	<!-- Start posts-entry -->
-	<section class="section posts-entry posts-entry-sm bg-light">
+	<section class="section posts-entry posts-entry-sm bg-dark">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 col-lg-3">
@@ -517,7 +517,7 @@
 		</div>
 	</section>
 
-	<div class="section bg-light">
+	<div class="section bg-dark">
 		<div class="container">
 
 			<div class="row mb-4">
