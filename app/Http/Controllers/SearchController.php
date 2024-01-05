@@ -6,6 +6,6 @@ class SearchController extends Controller
 {
     public function view()
     {
-        return view('contact');
+        return view('website.contact');
     }
 }

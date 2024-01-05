@@ -8,6 +8,6 @@ class PostController extends Controller
 
     public function view($id)
     {
-        return view('single')->with('name', $this->name);
+        return view('website.single')->with('name', $this->name);
     }
 }
