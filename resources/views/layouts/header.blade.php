@@ -19,7 +19,7 @@
     </div>
 @endif
 
-@if(Route::currentRouteName() != 'welcome')
+@if(substr(Route::currentRouteName(), 0, 7) == 'website')
 <div class="site-mobile-menu site-navbar-target bg-dark">
     <div class="site-mobile-menu-header">
         <div class="site-mobile-menu-close">
@@ -36,12 +36,12 @@
             <div class="site-navigation">
                 <div class="row g-0 align-items-center">
                     <div class="col-2">
-                        <a href="{{route('home.view')}}" class="logo m-0 float-start">BlogText</a>
+                        <a href="{{route('website.home.view')}}" class="logo m-0 float-start">BlogText</a>
                     </div>
                     <div class="col-8 text-center">
 
                         <ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu mx-auto">
-                            <li class="text-white @if(Route::getCurrentRoute()->getName() == 'home.view') active @endif"><a href="{{route('home.view')}}">Home</a></li>
+                            <li class="text-white @if(Route::getCurrentRoute()->getName() == 'website.home.view') active @endif"><a href="{{route('website.home.view')}}">Home</a></li>
                             {{-- <li class="has-children">
                                 <a href="category.html">Pages</a>
                                 <ul class="dropdown">
@@ -65,7 +65,7 @@
                             </li> --}}
                             {{-- <li @if(Route::getCurrentRoute()->getName() == 'home.view')class="active"@endif><a href="#">Culture</a></li>
                             <li @if(Route::getCurrentRoute()->getName() == 'home.view')class="active"@endif><a href="#">Business</a></li> --}}
-                            <li class="text-white @if(Route::getCurrentRoute()->getName() == 'perfil.view') active @endif"><a href="#" class="text-15">Perfil</a></li>
+                            <li class="text-white @if(Route::getCurrentRoute()->getName() == 'website.perfil.view') active @endif"><a href="#" class="text-15">Perfil</a></li>
                         </ul>
                     </div>
                     <div class="col-2 text-end bg-dark">
