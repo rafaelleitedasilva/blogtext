@@ -3,6 +3,8 @@ $font-family-sans-serif-secondary: 'Work Sans', sans-serif;
 
 $primary: #94ccd6;
 $secondary: #6DA1A0;
+$black: #000;
+$white: #fff;
 
 @import 'bootstrap/mixins';
 @import 'bootstrap/functions';
@@ -12,3 +14,68 @@ $secondary: #6DA1A0;
 @import 'components/site-base';
 @import 'components/site-blocks';
 @import 'components/site-footer';
+
+/*sass --watch resources/scss/style.scss:resources/css/app.css*/
+
+body{
+    .site-nav{
+        background-color: $white;
+        .site-navigation {
+            .site-menu{
+                li {
+                    a {
+                        font-size: 14px;
+                        color: $black;
+                        :hover{
+                            color: $black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .content-postagens{
+        margin-bottom: 50px;
+        display: flex;
+        .blog-entry{
+            font-size: clamp(2.021vw, 2.021vw + ((1vw - 0.2vw) * 3.239), 3.6vw);
+            letter-spacing: -0.02vw;
+            line-height: 1;
+            color: $white;
+        }
+        .foto-usuario{
+            img{
+                -webkit-border-radius: 100px;
+                -moz-border-radius: 100px;
+                border-radius: 100px;
+                width: 50px;
+                margin: 25px;
+            }
+        }
+        @media screen and (max-width:768px){
+            margin-bottom: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    .post-content-body{
+        p{
+            font-size: clamp(1.25vw, 1.25vw + ((1vw - 0.2vw) * 1.538), 2vw);
+            letter-spacing: -0.01vw;
+            line-height: 1.4;
+            @media screen and (max-width: 768px){
+                font-size: 18px;
+            }
+        }
+    }
+    .sidebar-box{
+        background-color: $black;
+    }
+    .burger.light:before, .burger.light span, .burger.light:after {
+        background: $black;
+    }
+}
+.bgblack{
+    background-color: $black;
+}
